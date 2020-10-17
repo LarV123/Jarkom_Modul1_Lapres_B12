@@ -5,7 +5,7 @@
 
 
 ## Daftar Isi
-[Display Filter](#df)
+#### [Display Filter](#df)
   1. [Nomor 1](#1)
   2. [Nomor 2](#2)
   3. [Nomor 3](#3)
@@ -16,7 +16,7 @@
   8. [Nomor 8](#8)
   9. [Nomor 9](#9)
   10. [Nomor 10](#10)
-[Capture Filter](#cf)
+#### [Capture Filter](#cf)
   11. [Nomor 11](#11)
   12. [Nomor 12](#12)
   13. [Nomor 13](#13)
