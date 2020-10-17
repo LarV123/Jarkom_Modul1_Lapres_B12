@@ -28,6 +28,7 @@
 <a name="1"></a>
 ### 1. Sebutkan webserver yang digunakan pada "testing.mekanis.me"!
 ``` http.host == testing.mekanis.me``` kemudian klik kanan, pilih follow -> HTTP stream, kemudia terlihat bahwa webservernya adalah ```nginx/1.14.0 (Ubuntu)```
+![testestes](/modul1/1.png)
 
 <a name="2"></a>
 ### 2. Simpan gambar "Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg"!
