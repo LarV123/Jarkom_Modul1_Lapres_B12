@@ -5,7 +5,7 @@
 
 
 ## Daftar Isi
-#### [Display Filter](#df)
+#### Display Filter
   1. [Nomor 1](#1)
   2. [Nomor 2](#2)
   3. [Nomor 3](#3)
@@ -16,14 +16,13 @@
   8. [Nomor 8](#8)
   9. [Nomor 9](#9)
   10. [Nomor 10](#10)
-#### [Capture Filter](#cf)
+#### Capture Filter
   11. [Nomor 11](#11)
   12. [Nomor 12](#12)
   13. [Nomor 13](#13)
   14. [Nomor 14](#14)
   15. [Nomor 15](#15)
 
-<a name="df"></a>
 ## Display Filter 
 <a name="1"></a>
 ### 1. Sebutkan webserver yang digunakan pada "testing.mekanis.me"!
@@ -90,7 +89,7 @@ Lalu didapetkan username=dhana dan password=dhana123
 ```ctrl+f``` > ```hex``` > ```25 50 44 46```> ```follow``` > ```tcp stream``` > ```raw``` > ```save as``` > ```now.pdf```
 ![testestes](/modul1/10.png)
 
-<a name="cf"></a>
+
 ## Capture Filter
 
 <a name="11"></a>
