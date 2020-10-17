@@ -34,10 +34,12 @@
 ### 2. Simpan gambar "Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg"!
 Display Filter: ```http contains "Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg"```
 kemudian Export Objects, pilih HTTP... lalu input pada Text Filter: ```http contains "Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg"```
+![testestes](/modul1/2.png)
 
 <a name="3"></a>
 ### 3. Cari username dan password ketika login di "ppid.dpr.go.id"!
 ```http.host==ppid.dpr.go.id && http contains "login"```
+![testestes](/modul1/3.png)
 
 <a name="4"></a>
 ### 4. Temukan paket dari web-web yang menggunakan basic authentication method!
@@ -45,6 +47,7 @@ kemudian Export Objects, pilih HTTP... lalu input pada Text Filter: ```http cont
 http contains "Authorization: Basic"
 http.authbasic
 ```
+![testestes](/modul1/4.png)
 
 <a name="5"></a>
 ### 5. Ikuti perintah di aku.pengen.pw! Username dan password bisa didapatkan dari file .pcapng!
@@ -52,6 +55,7 @@ http.authbasic
 http contains "Authorization: Basic" && http contains "aku.pengen.pw"
 http.authbasic && http contains "aku.pengen.pw"
 ```
+![testestes](/modul1/5.png)
 
 <a name="6"></a>
 ### 6. Seseorang menyimpan file zip melalui FTP dengan nama "Answer.zip". Simpan dan Buka file "Open This.pdf" di Answer.zip. Untuk mendapatkan password zipnya, temukan dalam file zipkey.txt (passwordnya adalah isi dari file txt tersebut).
@@ -59,6 +63,7 @@ http.authbasic && http contains "aku.pengen.pw"
 ftp-data.command contains "Answer.zip"
 ftp-data.command contains "zipkey.txt"
 ```
+![testestes](/modul1/6.png)
 
 <a name="7"></a>
 ### 7. Ada 500 file zip yang disimpan ke FTP Server dengan nama 1.zip, 2.zip, ..., 500.zip. Salah satunya berisi pdf yang berisi puisi. Simpan dan Buka file pdf tersebut. Your Super Mega Ultra Rare Hint = nama pdf-nya "Yes.pdf"
@@ -66,35 +71,44 @@ ftp-data.command contains "zipkey.txt"
 ftp-data contains "Yes.pdf"
 ftp-data.command contains "473.zip”
 ```
+![testestes](/modul1/7.png)
 
 <a name="8"></a>
 ### 8. Cari objek apa saja yang didownload (RETR) dari koneksi FTP dengan Microsoft FTP Service!
 ```ftp contains "RETR"```
+![testestes](/modul1/8.png)
 
 <a name="9"></a>
 ### 9. Cari username dan password ketika login FTP pada localhost!
 ```ftp.request.command==USER``` untuk mendapatkan username
 ```tp.request.command==PASS``` untuk mendapatkan password
 Lalu didapetkan username=dhana dan password=dhana123
+![testestes](/modul1/9.png)
 
 <a name="10"></a>
 ### 10. Cari file .pdf di wireshark lalu download dan buka file tersebut! clue: "25 50 44 46" 
 ```ctrl+f``` > ```hex``` > ```25 50 44 46```> ```follow``` > ```tcp stream``` > ```raw``` > ```save as``` > ```now.pdf```
+![testestes](/modul1/10.png)
 
 <a name="cf"></a>
 ## Capture Filter
 
 <a name="11"></a>
 ### 11. Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!
-``` port 21 ```
+menggunakan ``` port 21 ``` biasa. Tampilan ketika filter baru saja dijalankan tanpa ada aktivitas dalam filezilla:
+![testestes](/modul1/11-1.png)
+Ketika ada suatu aktivitas (misal: mengoneksikan filezilla)
+![testestes](/modul1/11-2.png)
 
 <a name="12"></a>
 ### 12. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80!
 ```src port 80```
+![testestes](/modul1/12.png)
 
 <a name="13"></a>
 ### 13. Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!
 ```dst port 443```
+![testestes](/modul1/13.png)
 
 <a name="14"></a>
 ### 14. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
@@ -104,7 +118,9 @@ src host [ip di ipv4]
 saya dapat ipv4 192.168.1.8
 src host 192.168.1.8
 ```
+![testestes](/modul1/14.png)
 
 <a name="15"></a>
 ### 15. Filter sehingga wireshark hanya mengambil paket yang tujuannya ke monta.if.its.ac.id!
 ``` dst host monta.if.its.ac.id```
+![testestes](/modul1/15.png)
