@@ -26,22 +26,27 @@
 ## Display Filter 
 <a name="1"></a>
 ### 1. Sebutkan webserver yang digunakan pada "testing.mekanis.me"!
-``` http.host == testing.mekanis.me``` kemudian klik kanan, pilih follow -> HTTP stream, kemudia terlihat bahwa webservernya adalah ```nginx/1.14.0 (Ubuntu)```
+filter menggunakan ``` http.host == testing.mekanis.me``` kemudian klik kanan, pilih ```follow -> HTTP stream```, kemudia terlihat bahwa webservernya adalah ```nginx/1.14.0 (Ubuntu)```
 ![testestes](/modul1/1.png)
 
 <a name="2"></a>
 ### 2. Simpan gambar "Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg"!
-Display Filter: ```http contains "Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg"```
-kemudian Export Objects, pilih HTTP... lalu input pada Text Filter: ```http contains "Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg"```
+- Display Filter: ```http contains "Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg"``` untuk menyimpan gambar
+- kemudian ```Export Objects```, pilih ```HTTP...``` 
+- lalu pada Text Filter input: ```http contains "Tim_Kunjungan_Kerja_BAKN_DPR_RI_ke_Sukabumi141436.jpg"```
+- kemudian save file pada direktori yang diinginkan
 ![testestes](/modul1/2.png)
 
 <a name="3"></a>
 ### 3. Cari username dan password ketika login di "ppid.dpr.go.id"!
-```http.host==ppid.dpr.go.id && http contains "login"```
+filter menggunakan ```http.host==ppid.dpr.go.id && http contains "login"```, kemudian pada perintah ```POST``` terdapat informasi berupa:
+- username: 10pemuda
+- password: guncangdunia
 ![testestes](/modul1/3.png)
 
 <a name="4"></a>
 ### 4. Temukan paket dari web-web yang menggunakan basic authentication method!
+Dengan menggunakan filter:
 ```
 http contains "Authorization: Basic"
 http.authbasic
@@ -54,22 +59,24 @@ http.authbasic
 http contains "Authorization: Basic" && http contains "aku.pengen.pw"
 http.authbasic && http contains "aku.pengen.pw"
 ```
+Lalu ```GET > Credential``` dan didapatkan:
+- username: kakakgamtenk
+- password: hartatahtabermuda
 ![testestes](/modul1/5.png)
 
 <a name="6"></a>
 ### 6. Seseorang menyimpan file zip melalui FTP dengan nama "Answer.zip". Simpan dan Buka file "Open This.pdf" di Answer.zip. Untuk mendapatkan password zipnya, temukan dalam file zipkey.txt (passwordnya adalah isi dari file txt tersebut).
-```
-ftp-data.command contains "Answer.zip"
-ftp-data.command contains "zipkey.txt"
-```
+
+- ```ftp-data.command contains "Answer.zip"``` untuk mencari dan mendownload file .zip
+- ```ftp-data.command contains "zipkey.txt"``` untuk mencari file text yang ada pada file zip tersebut
 ![testestes](/modul1/6.png)
 
 <a name="7"></a>
 ### 7. Ada 500 file zip yang disimpan ke FTP Server dengan nama 1.zip, 2.zip, ..., 500.zip. Salah satunya berisi pdf yang berisi puisi. Simpan dan Buka file pdf tersebut. Your Super Mega Ultra Rare Hint = nama pdf-nya "Yes.pdf"
-```
-ftp-data contains "Yes.pdf"
-ftp-data.command contains "473.zip”
-```
+- ```ftp-data contains "Yes.pdf"``` untuk mencari file "Yes.pdf" lalu didapat file zip yang berisi file "Yes.pdf" yaitu "473.zip"
+- ```ftp-data.command contains "473.zip”``` untuk mencari file "473.zip"
+- kemudian ```klik kanan > Follow > TCP Stream > Save as Raw Bernama 473.zip```
+Buka 473.zip dan buka .pdf nya
 ![testestes](/modul1/7.png)
 
 <a name="8"></a>
@@ -86,7 +93,7 @@ Lalu didapetkan username=dhana dan password=dhana123
 
 <a name="10"></a>
 ### 10. Cari file .pdf di wireshark lalu download dan buka file tersebut! clue: "25 50 44 46" 
-```ctrl+f``` > ```hex``` > ```25 50 44 46```> ```follow``` > ```tcp stream``` > ```raw``` > ```save as``` > ```now.pdf```
+```ctrl+f > hex > 25 50 44 46 > follow > tcp stream > raw > save as > now.pdf```
 ![testestes](/modul1/10.png)
 
 
