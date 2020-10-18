@@ -68,7 +68,9 @@ Lalu ```GET > Credential``` dan didapatkan:
 ### 6. Seseorang menyimpan file zip melalui FTP dengan nama "Answer.zip". Simpan dan Buka file "Open This.pdf" di Answer.zip. Untuk mendapatkan password zipnya, temukan dalam file zipkey.txt (passwordnya adalah isi dari file txt tersebut).
 
 - ```ftp-data.command contains "Answer.zip"``` untuk mencari dan mendownload file .zip
+- kemudian ```klik kanan > Follow > TCP Stream > Save as Raw Bernama Answer.zip```
 - ```ftp-data.command contains "zipkey.txt"``` untuk mencari file text yang ada pada file zip tersebut
+- kemudian ```klik kanan > Follow > TCP Stream > Save as Raw Bernama zipkey.txt```
 ![testestes](/modul1/6.png)
 
 <a name="7"></a>
